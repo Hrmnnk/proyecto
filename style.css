@@ -1,0 +1,44 @@
+#cabezera {
+        background: #333;
+        color: white;
+        height: 80px;
+        margin-bottom: 10%;
+        justify-content: space-around;
+        display: flex;
+        align-items: end;
+ 
+    }	
+#logo{
+    background-color: chocolate;
+   
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+}
+
+  .borde1{
+background-color: darkslategray;
+font-size: 29px;
+  }
+  #cuerpo1{
+    border: blue 2px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#boton{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #0CBABA;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+button:active {
+    transform: scale(0.95);
+}
