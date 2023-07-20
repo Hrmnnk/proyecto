@@ -1,44 +1,83 @@
 #cabezera {
-        background: #333;
-        color: white;
-        height: 80px;
-        margin-bottom: 10%;
-        justify-content: space-around;
-        display: flex;
-        align-items: end;
- 
-    }	
-#logo{
-    background-color: chocolate;
-   
-    display: flex;
+  background: #333;
+  color: white;
+  height: 48px;
+  margin-bottom: 10%;
+  justify-content: space-around;
+  display: flex;
+  align-items: end;
+}
+
+#logo {
+  background-color: chocolate;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-
- 
 }
 
-  .borde1{
-background-color: darkslategray;
-font-size: 29px;
-  }
-  #cuerpo1{
-    border: blue 2px solid;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+.borde1 {
+  background-color: darkslategray;
+  font-size: 29px;
 }
-#boton{
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #0CBABA;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
+
+#cuerpo1 {
+  border: blue 2px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* position: absolute;
+    z-index: 1; */
 }
+
+#boton {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0cbaba;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
+  transform: translateY(-500);
 }
+
+#subcuerpo {
+  justify-content: space-around;
+  background: darkmagenta;
+  height: 736px;
+  border: blue 2px solid;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  flex-direction: column;
+  align-content: space-around;
+  padding: 30px;
+
+  /* z-index: 0;
+  position: absolute; */
+}
+
+.botones {
+  height: 200px;
+  width: 200px;
+  background: #333;
+  display: flex;
+  transition: 0.3s;
+  border: none;
+}
+.botones:hover{
+  transform:scale(1.2);
+
+}
+
+/* #universo{
+    position: relative;
+    background: #fff;
+  } */
