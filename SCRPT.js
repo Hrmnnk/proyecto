@@ -3,9 +3,13 @@ const BLOQUE1 = document.getElementById("logo");
 const BLOQUE2 = document.getElementById("introduccion");
 const CUERPO1 = document.getElementById("cuerpo1");
 const SUBCUERPO = document.getElementById("subcuerpo");
-const ABRIR = document.getElementById("botones");
-const CERRAR = document.getElementById("bcerrar");
+const ABRIR =  document.querySelectorAll(".botones");
+const CERRAR = document.querySelector(".bcerrar");
 const DIALOG = document.getElementById("dialog1");
+const ALL= document.getElementById("all");
+const MORNING= document.getElementById("morning")
+// const TARDE= Document.getElementById("tarde")
+// const NOCHE= Document.getElementById("noche")
 
 //document.querySelector("body").appendChild(CUERPO1);
 BOTON.addEventListener("click", botonanimar);
@@ -36,8 +40,8 @@ function botonanimar() {
   let coords = BOTON.getBoundingClientRect();
   console.log(coords);
 }
-
-ABRIR.addEventListener("click", abre);
+ABRIR.forEach(function(elem){
+elem.addEventListener("click", abre);})
 function abre() {
   DIALOG.showModal(); // Muestra el diálogo
 
@@ -58,3 +62,22 @@ CERRAR.addEventListener("click", cierra);
 function cierra() {
     DIALOG.close({ duration: 700}); // Cierra el diálogo
 }
+
+ALL.addEventListener("click", todos);
+function todos(){
+    ABRIR.forEach(function(elem){
+      elem.style.display = "block"
+       
+      })
+}
+
+MORNING.addEventListener("click", morning);
+function morning(){
+    ABRIR.forEach(function(elem){
+      if (elem.id == "boton1"){
+        elem.style.display = "none"
+      }
+      })
+}
+
+
