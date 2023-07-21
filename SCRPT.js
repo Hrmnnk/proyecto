@@ -3,9 +3,9 @@ const BLOQUE1 = document.getElementById("logo");
 const BLOQUE2 = document.getElementById("introduccion");
 const CUERPO1 = document.getElementById("cuerpo1");
 const SUBCUERPO = document.getElementById("subcuerpo");
-const ABRIR = document.getElementsById("botones");
-const CERRAR= document.getElementsById("bcerrar");
-const DIALOG= document.getElementById("dialog1");
+const ABRIR = document.getElementById("botones");
+const CERRAR = document.getElementById("bcerrar");
+const DIALOG = document.getElementById("dialog1");
 
 //document.querySelector("body").appendChild(CUERPO1);
 BOTON.addEventListener("click", botonanimar);
@@ -36,7 +36,25 @@ function botonanimar() {
   let coords = BOTON.getBoundingClientRect();
   console.log(coords);
 }
-ABRIR.addEventListener('click',abricion(){
-  
-})
 
+ABRIR.addEventListener("click", abre);
+function abre() {
+  DIALOG.showModal(); // Muestra el diálogo
+
+  DIALOG.animate(
+    {
+      opacity: 1,
+    },
+    {
+      duration: 800,
+      fill: "forwards",
+    }
+    
+  );
+}
+
+// Evento para cerrar el diálogo al hacer clic en el botón "Cerrar diálogo"
+CERRAR.addEventListener("click", cierra);
+function cierra() {
+    DIALOG.close({ duration: 700}); // Cierra el diálogo
+}

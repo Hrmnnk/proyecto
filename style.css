@@ -64,7 +64,7 @@ button:active {
   position: absolute; */
 }
 
-.botones {
+#botones {
   height: 200px;
   width: 200px;
   background: #333;
@@ -72,12 +72,56 @@ button:active {
   transition: 0.3s;
   border: none;
 }
-.botones:hover{
+#botones:hover{
   transform:scale(1.2);
 
 }
 
-/* #universo{
-    position: relative;
-    background: #fff;
-  } */
+  #universo{
+      position: relative;
+      background: #fff;
+    }
+  #dialog1 {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    opacity: 0;
+    height: 736px;
+    width: 80%;
+    /* display: flex; */
+}
+dialog::backdrop {
+  position: fixed;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.5);
+}
+#imagen{
+
+  background: #333;
+  width: 354px;
+  height: 286px;
+}
+#info{
+  background: transparent;
+  margin-top: -292px;
+  margin-left: 521px;
+  height: 645px;
+  width: 519px;
+  margin-bottom: -249px;
+  border: rgb(22, 22, 23) 2px solid;
+}
+#contactar{
+  background: #b32525;
+    height: 200px;
+    width: 400px;
+    margin-bottom: -158px;
+}
+#bcerrar {
+  margin-top: 26%;
+  margin-left: 92%;
+}
+
+
+
+
