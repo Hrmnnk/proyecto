@@ -134,6 +134,7 @@ dialog::backdrop {
     width: 392px;
     border-radius: 17px;
     height: 35px;
+    display: none;
 }
 .botonsito{
   height: 26px;

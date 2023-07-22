@@ -8,14 +8,16 @@ const CERRAR = document.querySelector(".bcerrar");
 const DIALOG = document.getElementById("dialog1");
 const ALL= document.getElementById("all");
 const MORNING= document.getElementById("morning")
-// const TARDE= Document.getElementById("tarde")
-// const NOCHE= Document.getElementById("noche")
+const TARDE= document.getElementById("tarde")
+const NOCHE= document.getElementById("noche")
+const HORARIOS = document.getElementById("horarios")
 
 //document.querySelector("body").appendChild(CUERPO1);
 BOTON.addEventListener("click", botonanimar);
 function botonanimar() {
   BLOQUE1.style.display = "none";
   BLOQUE2.style.display = "none";
+  HORARIOS.style.display="block";
   SUBCUERPO.animate(
     {
       transform: "translateY(-40px)",
@@ -27,6 +29,7 @@ function botonanimar() {
     }
   );
 
+
   CUERPO1.animate(
     {
       transform: "translateY(-120px)",
@@ -36,6 +39,9 @@ function botonanimar() {
       fill: "forwards",
     }
   );
+  
+  
+
 
   let coords = BOTON.getBoundingClientRect();
   console.log(coords);
@@ -74,10 +80,28 @@ function todos(){
 MORNING.addEventListener("click", morning);
 function morning(){
     ABRIR.forEach(function(elem){
-      if (elem.id == "boton1"){
+      if (elem.id == "boton1"|| elem.id === "boton2"){
         elem.style.display = "none"
+      
       }
       })
 }
-
+TARDE.addEventListener("click", tarde);
+function tarde(){
+    ABRIR.forEach(function(elem){
+      if (elem.id == "boton3"|| elem.id === "boton4"){
+        elem.style.display = "none"
+        
+      }
+      })
+}
+NOCHE.addEventListener("click", noche);
+function noche(){
+    ABRIR.forEach(function(elem){
+      if (elem.id == "boton6"){
+        elem.style.display = "none"
+      
+      }
+      })
+}
 
